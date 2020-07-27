@@ -3,25 +3,7 @@
   <entry>
     <title>图片</title>
     <url>/post/undefined.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><a href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg" target="_blank" rel="noopener" data-fancybox="images" data-caption="sakura"><img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg"></a><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><a href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg" target="_blank" rel="noopener" data-fancybox="images" data-caption="sakura"><img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg"></a>]]></content>
       <categories>
         <category>图片</category>
       </categories>
@@ -37,19 +19,19 @@
 
 <h3 id="一-创建OkHttpClient的实例"><a href="#一-创建OkHttpClient的实例" class="headerlink" title="(一)创建OkHttpClient的实例"></a>(一)创建OkHttpClient的实例</h3><pre><code class="cpp">   OkHttpClient client = new OkHttpClient();</code></pre>
 <h3 id="二-创建一个Request-对象"><a href="#二-创建一个Request-对象" class="headerlink" title="(二)创建一个Request 对象"></a>(二)创建一个Request 对象</h3><pre><code class="cpp">   Request request = new Request.Builder()
-    .url("http://www.baidu.com")
+    .url(&quot;http://www.baidu.com&quot;)
     .build();</code></pre>
 <h3 id="三-获取服务器返回的数据"><a href="#三-获取服务器返回的数据" class="headerlink" title="(三)获取服务器返回的数据"></a>(三)获取服务器返回的数据</h3><pre><code>调用OkHttpClient的newCall() 方法来创建一个Call 对象，并调用它的execute() 方法</code></pre><p>来发送请求并获取服务器返回的数据</p>
 <pre><code class="cpp">   Response response = client.newCall(request).execute();
    String responseData = response.body().string();</code></pre>
 <h3 id="四-发起一条POST请求"><a href="#四-发起一条POST请求" class="headerlink" title="(四)发起一条POST请求"></a>(四)发起一条POST请求</h3><pre><code>需要先构建出一个Request</code></pre><p>Body 对象来存放待提交的参数</p>
 <pre><code class="cpp">     RequestBody requestBody = new FormBody.Builder()
-    .add("username", "admin")
-    .add("password", "123456")
+    .add(&quot;username&quot;, &quot;admin&quot;)
+    .add(&quot;password&quot;, &quot;123456&quot;)
     .build();
 
      Request request = new Request.Builder()
-    .url("http://www.baidu.com")
+    .url(&quot;http://www.baidu.com&quot;)
     .post(requestBody)
     .build();
 
@@ -58,7 +40,7 @@
 <h3 id="发送Get请求获取百度数据"><a href="#发送Get请求获取百度数据" class="headerlink" title="发送Get请求获取百度数据"></a>发送Get请求获取百度数据</h3><pre><code class="cpp">    try {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-        .url("http://www.baidu.com")
+        .url(&quot;http://www.baidu.com&quot;)
         .build();
         Response response = client.newCall(request).execute();
         String responseData = response.body().string();
@@ -66,25 +48,7 @@
         } catch (Exception e) {
             e.printStackTrace();
         }</code></pre>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+]]></content>
       <categories>
         <category>技术</category>
       </categories>
@@ -95,42 +59,24 @@
   <entry>
     <title>Hello World</title>
     <url>/post/3eeb.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>欢迎来到 <a href="https://anbulang.top" target="_blank" rel="noopener">anbulang安的blog</a>! 这是我的第一篇文章。. 如果你对我感兴趣，可以关注我哦。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>欢迎来到 <a href="https://anbulang.top">anbulang安的blog</a>! 这是我的第一篇文章。. 如果你对我感兴趣，可以关注我哦。</p>
 <h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><h3 id="Linux内核层"><a href="#Linux内核层" class="headerlink" title="Linux内核层"></a>Linux内核层</h3><pre><code class="cpp">    Android系统是基于Linux内核的，这一层为Android设备的各种硬件提供了底层
 的驱动，如显示驱动、音频驱动、照相机驱动、蓝牙驱动、Wi-Fi驱动、电源管理等。</code></pre>
-<p>More info: <a href="">Writing</a></p>
+<p>More info: <a href>Writing</a></p>
 <h3 id="系统运行库层"><a href="#系统运行库层" class="headerlink" title="系统运行库层"></a>系统运行库层</h3><pre><code class="cpp">    这一层通过一些C/C++库来为Android系统提供了主要的特性支持。如SQLite库提供了数据
 库的支持，OpenGL|ES库提供了3D绘图的支持，Webkit库提供了浏览器内核的支持等。</code></pre>
-<p>More info: <a href="">Server</a></p>
+<p>More info: <a href>Server</a></p>
 <h3 id="应用框架层"><a href="#应用框架层" class="headerlink" title="应用框架层"></a>应用框架层</h3><pre><code class="bash">  这一层主要提供了构建应用程序时可能用到的各种API，Android自带的一些核心应用就是
 使用这些API完成的，开发者也可以通过使用这些API来构建自己的应用程序。</code></pre>
-<p>More info: <a href="">Generating</a></p>
+<p>More info: <a href>Generating</a></p>
 <h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><pre><code class="cpp">    所有安装在手机上的应用程序都是属于这一层的，比如系统自带的联系人、短信等程序，
 或者是你从Google Play上下载的小游戏，当然还包括你自己开发的程序。</code></pre>
 <pre><code class="cpp">name: 名称
 url:  地址
 img:  头像
 desc: 描述</code></pre>
-<p>More info: <a href="">Deployment</a></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
+<p>More info: <a href>Deployment</a></p>
+]]></content>
       <categories>
         <category>技术</category>
       </categories>
