@@ -1111,7 +1111,7 @@ h6 {
 p {
     margin-bottom: 1.5em;
     font-size: 15px;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur), auto
+    cursor: pointer;s
 }
 
 dfn,
@@ -9122,6 +9122,7 @@ a.toc-link {
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
+    height:auto;
     overflow: auto;
     text-shadow: none;
     color: #000;
@@ -9168,7 +9169,7 @@ a.toc-link {
 
     text-shadow: none;
     border-radius: 0 0 5px 5px;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur), auto;
+    cursor: ;
 }
 
 .highlight-wrap code[data-rel]:before {
