@@ -1,6 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>图片</title>
+    <url>/post/undefined.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><a href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg" target="_blank" rel="noopener" data-fancybox="images" data-caption="sakura"><img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg"></a>]]></content>
+      <categories>
+        <category>图片</category>
+      </categories>
+      <tags>
+        <tag>相册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BaseAdapter简单使用</title>
+    <url>/post/26a9.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      <categories>
+        <category>uncategorized</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Greendao3.3.0的简单实用</title>
+    <url>/post/361f.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="greenDAO"><a href="#greenDAO" class="headerlink" title="greenDAO"></a>greenDAO</h2><p>greenDAO是Android的对象/关系映射（ORM）工具。它为关系数据库SQLite提供了面向对象的接口。像greenDAO这样的ORM工具可以为您完成许多重复性任务，并为您的数据提供简单的界面。</p>
+<a id="more"></a>
+
+
+<h3 id="一-配置环境，添加依赖"><a href="#一-配置环境，添加依赖" class="headerlink" title="(一)配置环境，添加依赖"></a>(一)配置环境，添加依赖</h3><p>在工程目录下build.gradle下dependencies添加插件</p>
+<pre><code class="cpp">// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral() // 添加
+    }
+    dependencies {
+        classpath &quot;com.android.tools.build:gradle:4.0.0&quot;
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath &#39;org.greenrobot:greendao-gradle-plugin:3.3.0&#39; // 添加
+    }
+}</code></pre>
+<p>在app的build.gradle文件下进行如下配置</p>
+<pre><code class="cpp">apply plugin: &#39;com.android.application&#39;
+apply plugin: &#39;org.greenrobot.greendao&#39; //添加
+android {
+    compileSdkVersion 29
+    buildToolsVersion &quot;29.0.3&quot;
+
+    defaultConfig {
+
+    }
+    buildTypes {
+        release {
+
+        }
+    }
+
+    greendao{
+        schemaVersion 1 //指定数据库schema版本号，迁移等操作会用到;
+        daoPackage &#39;com.greendao.gen&#39; //dao的包名，包名默认是entity所在的包；
+        targetGenDir &#39;src/main/java&#39;   //生成数据库文件的目录;
+    } //添加
+}
+
+dependencies {
+    implementation &#39;org.greenrobot:greendao:3.3.0&#39; // 添加库
+}</code></pre>
+]]></content>
+      <categories>
+        <category>uncategorized</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>数据存储之SQLiteOpenHelper帮助类创SQLite建数据库</title>
+    <url>/post/44e4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="SQLiteOpenHelper"><a href="#SQLiteOpenHelper" class="headerlink" title="SQLiteOpenHelper"></a>SQLiteOpenHelper</h2><p>Android为了让我们能够更加方便地管理数据库，专门提供了一个SQLiteOpenHelper帮助类，借<br>助这个类就可以非常简单地对数据库进行创建和升级。</p>
+<a id="more"></a>
+
+<h3 id="一-需要重写的方法："><a href="#一-需要重写的方法：" class="headerlink" title="(一)需要重写的方法："></a>(一)需要重写的方法：</h3><p>SQLiteOpenHelper是一个抽象类，需要创建<br>一个自己的帮助类去继承它。。SQLiteOpenHelper中有两个抽象方法，分别是onCreate() 和<br>onUpgrade() ，我们必须在自己的帮助类里面重写这两个方法，然后分别在这两个方法中去<br>实现创建、升级数据库的逻辑。</p>
+<h3 id="二-两个非常重要的实例方法："><a href="#二-两个非常重要的实例方法：" class="headerlink" title="(二)两个非常重要的实例方法："></a>(二)两个非常重要的实例方法：</h3><p>getReadableDatabase()和<br>getWritableDatabase()<br>这两个方法都可以创建或打开一个现有的数据库（如果数据库<br>已存在则直接打开，否则创建一个新的数据库），并返回一个可对数据库进行读写操作的对<br>象。不同的是，当数据库不可写入的时候（如磁盘空间已满），getReadableDatabase()<br>方法返回的对象将以只读的方式去打开数据库，而getWritableDatabase() 方法则将出现<br>异常。</p>
+<h3 id="三-可供重写的两个构造方法"><a href="#三-可供重写的两个构造方法" class="headerlink" title="(三)可供重写的两个构造方法"></a>(三)可供重写的两个构造方法</h3><p>SQLiteOpenHelper中有两个构造方法可供重写，一般使用参数少一点的那个构造方法即可。一般使用参数少一点的那个构造方法。这个构造方法中接收4个参数，content,数据库名,自定义的Cursor(一般都是传入null),数据库的版本号。构建出SQLiteOpenHelper的实例之后，再调用它的getReadableDatabase() 或getWritableDatabase() 方法就能够创建数据库了，数据库文件会存放在/data/data/<package name>/databases/目录下。此时，重写的onCreate()方法也会得到执行，所以通常会在这里去处理一些创建表的逻辑。<br>实例创建Book数据库代码如下：</package></p>
+<pre><code class="cpp">public class MyDatabaseHelper extends SQLiteOpenHelper {
+
+    public static final String CREATE_BOOK = &quot;create table Book (&quot;
+    + &quot;id integer primary key autoincrement, &quot;
+    + &quot;author text, &quot;
+    + &quot;price real, &quot;
+    + &quot;pages integer, &quot;
+    + &quot;name text)&quot;;
+
+    private Context mContext;
+    public MyDatabaseHelper(Context context, String name,SQLiteDatabase.
+        CursorFactory factory, int version) {
+        super(context, name, factory, version);
+        mContext = context;
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(CREATE_BOOK);
+        Toast.makeText(mContext, &quot;Create succeeded&quot;, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    }
+}</code></pre>
+<pre><code class="cpp">    MyDatabaseHelper dbHelper = new MyDatabaseHelper(this, &quot;BookStore.db&quot;, 
+    null, 1);
+    dbHelper.getWritableDatabase();
+</code></pre>
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>安卓学习记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>okhttp and json的使用</title>
+    <url>/post/9bbe.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="一-创建OkHttpClient的实例"><a href="#一-创建OkHttpClient的实例" class="headerlink" title="(一)创建OkHttpClient的实例"></a>(一)创建OkHttpClient的实例</h3><pre><code class="cpp">   public static void okHttpRequest(String address, JSONObject jsonObject , okhttp3.Callback callback){
+        MediaType mediaType=MediaType.parse(&quot;application/json;charset=utf-8&quot;);
+        RequestBody requestBody=RequestBody.create(mediaType,String.valueOf(jsonObject));
+        OkHttpClient okhttpClient=new OkHttpClient();
+        Request request=new Request.Builder().url(address).post(requestBody).build();
+        okhttpClient.newCall(request).enqueue(callback);
+    }</code></pre>
+]]></content>
+      <categories>
+        <category>uncategorized</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>list排序</title>
+    <url>/post/7703.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      <categories>
+        <category>uncategorized</category>
+      </categories>
+  </entry>
+  <entry>
     <title>okHttp3的使用</title>
     <url>/post/376.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="okHttp3的使用"><a href="#okHttp3的使用" class="headerlink" title="okHttp3的使用"></a>okHttp3的使用</h2><p><a href="https://anbuluan.github.io//" target="_blank" rel="noopener">OkHttp</a>是由鼎鼎大名的Square公司开发的，这个公司在开源事业上面贡献良多，除了OkHttp之<br>外，还开发了像Picasso、Retrofit等著名的开源项目。OkHttp不仅在接口封装上面做得简单易<br>用，就连在底层实现上也是自成一派，比起原生的HttpURLConnection，可以说是有过之而无不<br>及，现在已经成了广大Android开发者首选的网络通信库。</p>
@@ -72,144 +214,5 @@ desc: 描述</code></pre>
       <tags>
         <tag>知识</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>图片</title>
-    <url>/post/undefined.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><a href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg" target="_blank" rel="noopener" data-fancybox="images" data-caption="sakura"><img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg"></a>]]></content>
-      <categories>
-        <category>图片</category>
-      </categories>
-      <tags>
-        <tag>相册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>list排序</title>
-    <url>/post/7703.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>okhttp and json的使用</title>
-    <url>/post/9bbe.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="一-创建OkHttpClient的实例"><a href="#一-创建OkHttpClient的实例" class="headerlink" title="(一)创建OkHttpClient的实例"></a>(一)创建OkHttpClient的实例</h3><pre><code class="cpp">   public static void okHttpRequest(String address, JSONObject jsonObject , okhttp3.Callback callback){
-        MediaType mediaType=MediaType.parse(&quot;application/json;charset=utf-8&quot;);
-        RequestBody requestBody=RequestBody.create(mediaType,String.valueOf(jsonObject));
-        OkHttpClient okhttpClient=new OkHttpClient();
-        Request request=new Request.Builder().url(address).post(requestBody).build();
-        okhttpClient.newCall(request).enqueue(callback);
-    }</code></pre>
-]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>数据存储之SQLiteOpenHelper帮助类创SQLite建数据库</title>
-    <url>/post/44e4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="SQLiteOpenHelper"><a href="#SQLiteOpenHelper" class="headerlink" title="SQLiteOpenHelper"></a>SQLiteOpenHelper</h2><p>Android为了让我们能够更加方便地管理数据库，专门提供了一个SQLiteOpenHelper帮助类，借<br>助这个类就可以非常简单地对数据库进行创建和升级。</p>
-<a id="more"></a>
-
-<h3 id="一-需要重写的方法："><a href="#一-需要重写的方法：" class="headerlink" title="(一)需要重写的方法："></a>(一)需要重写的方法：</h3><p>SQLiteOpenHelper是一个抽象类，需要创建<br>一个自己的帮助类去继承它。。SQLiteOpenHelper中有两个抽象方法，分别是onCreate() 和<br>onUpgrade() ，我们必须在自己的帮助类里面重写这两个方法，然后分别在这两个方法中去<br>实现创建、升级数据库的逻辑。</p>
-<h3 id="二-两个非常重要的实例方法："><a href="#二-两个非常重要的实例方法：" class="headerlink" title="(二)两个非常重要的实例方法："></a>(二)两个非常重要的实例方法：</h3><p>getReadableDatabase()和<br>getWritableDatabase()<br>这两个方法都可以创建或打开一个现有的数据库（如果数据库<br>已存在则直接打开，否则创建一个新的数据库），并返回一个可对数据库进行读写操作的对<br>象。不同的是，当数据库不可写入的时候（如磁盘空间已满），getReadableDatabase()<br>方法返回的对象将以只读的方式去打开数据库，而getWritableDatabase() 方法则将出现<br>异常。</p>
-<h3 id="三-可供重写的两个构造方法"><a href="#三-可供重写的两个构造方法" class="headerlink" title="(三)可供重写的两个构造方法"></a>(三)可供重写的两个构造方法</h3><p>SQLiteOpenHelper中有两个构造方法可供重写，一般使用参数少一点的那个构造方法即可。一般使用参数少一点的那个构造方法。这个构造方法中接收4个参数，content,数据库名,自定义的Cursor(一般都是传入null),数据库的版本号。构建出SQLiteOpenHelper的实例之后，再调用它的getReadableDatabase() 或getWritableDatabase() 方法就能够创建数据库了，数据库文件会存放在/data/data/<package name>/databases/目录下。此时，重写的onCreate()方法也会得到执行，所以通常会在这里去处理一些创建表的逻辑。<br>实例创建Book数据库代码如下：</package></p>
-<pre><code class="cpp">public class MyDatabaseHelper extends SQLiteOpenHelper {
-
-    public static final String CREATE_BOOK = &quot;create table Book (&quot;
-    + &quot;id integer primary key autoincrement, &quot;
-    + &quot;author text, &quot;
-    + &quot;price real, &quot;
-    + &quot;pages integer, &quot;
-    + &quot;name text)&quot;;
-
-    private Context mContext;
-    public MyDatabaseHelper(Context context, String name,SQLiteDatabase.
-        CursorFactory factory, int version) {
-        super(context, name, factory, version);
-        mContext = context;
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_BOOK);
-        Toast.makeText(mContext, &quot;Create succeeded&quot;, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    }
-}</code></pre>
-<pre><code class="cpp">    MyDatabaseHelper dbHelper = new MyDatabaseHelper(this, &quot;BookStore.db&quot;, 
-    null, 1);
-    dbHelper.getWritableDatabase();
-</code></pre>
-]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>安卓学习记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Greendao3.3.0的简单实用</title>
-    <url>/post/361f.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="greenDAO"><a href="#greenDAO" class="headerlink" title="greenDAO"></a>greenDAO</h2><p>greenDAO是Android的对象/关系映射（ORM）工具。它为关系数据库SQLite提供了面向对象的接口。像greenDAO这样的ORM工具可以为您完成许多重复性任务，并为您的数据提供简单的界面。</p>
-<a id="more"></a>
-
-
-<h3 id="一-配置环境，添加依赖"><a href="#一-配置环境，添加依赖" class="headerlink" title="(一)配置环境，添加依赖"></a>(一)配置环境，添加依赖</h3><p>在工程目录下build.gradle下dependencies添加插件</p>
-<pre><code class="cpp">// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        google()
-        jcenter()
-        mavenCentral() // 添加
-    }
-    dependencies {
-        classpath &quot;com.android.tools.build:gradle:4.0.0&quot;
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-        classpath &#39;org.greenrobot:greendao-gradle-plugin:3.3.0&#39; // 添加
-    }
-}</code></pre>
-<p>在app的build.gradle文件下进行如下配置</p>
-<pre><code class="cpp">apply plugin: &#39;com.android.application&#39;
-apply plugin: &#39;org.greenrobot.greendao&#39; //添加
-android {
-    compileSdkVersion 29
-    buildToolsVersion &quot;29.0.3&quot;
-
-    defaultConfig {
-
-    }
-    buildTypes {
-        release {
-
-        }
-    }
-
-    greendao{
-        schemaVersion 1 //指定数据库schema版本号，迁移等操作会用到;
-        daoPackage &#39;com.greendao.gen&#39; //dao的包名，包名默认是entity所在的包；
-        targetGenDir &#39;src/main/java&#39;   //生成数据库文件的目录;
-    } //添加
-}
-
-dependencies {
-    implementation &#39;org.greenrobot:greendao:3.3.0&#39; // 添加库
-}</code></pre>
-]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>BaseAdapter简单使用</title>
-    <url>/post/26a9.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
   </entry>
 </search>
