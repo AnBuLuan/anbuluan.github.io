@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://anbulang.top/"/>
-  <updated>2021-05-23T09:43:27.509Z</updated>
+  <updated>2021-06-05T12:14:01.961Z</updated>
   <id>https://anbulang.top/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>关于我</title>
-    <link href="https://anbulang.top/post/dab4.html"/>
-    <id>https://anbulang.top/post/dab4.html</id>
+    <link href="https://anbulang.top/post/dab4zxcwer.html"/>
+    <id>https://anbulang.top/post/dab4zxcwer.html</id>
     <published>2021-05-23T09:37:29.000Z</published>
-    <updated>2021-05-23T09:43:27.509Z</updated>
+    <updated>2021-06-05T12:14:01.961Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>总觉得自己该写点什么，但是一提起笔，回顾自己转瞬即逝的二十多年，却也一时间不知道该从哪里说起，只能感慨：时间真的好快啊。</p>]]></content>
     
     <summary type="html">
     
@@ -41,37 +41,13 @@
   </entry>
   
   <entry>
-    <title>哈哈哈</title>
-    <link href="https://anbulang.top/post/7703.html"/>
-    <id>https://anbulang.top/post/7703.html</id>
-    <published>2020-09-23T14:45:28.000Z</published>
-    <updated>2021-05-23T09:40:38.768Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="uncategorized" scheme="https://anbulang.top/categories/uncategorized/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="https://anbulang.top/post/3eeb.html"/>
     <id>https://anbulang.top/post/3eeb.html</id>
     <published>2020-06-27T07:10:09.000Z</published>
-    <updated>2020-07-14T10:07:14.774Z</updated>
+    <updated>2021-06-05T12:15:38.059Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>欢迎来到 <a href="https://anbulang.top">anbulang安的blog</a>! 这是我的第一篇文章。. 如果你对我感兴趣，可以关注我哦。</p><h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><h3 id="Linux内核层"><a href="#Linux内核层" class="headerlink" title="Linux内核层"></a>Linux内核层</h3><pre><code class="cpp">    Android系统是基于Linux内核的，这一层为Android设备的各种硬件提供了底层的驱动，如显示驱动、音频驱动、照相机驱动、蓝牙驱动、Wi-Fi驱动、电源管理等。</code></pre><p>More info: <a href>Writing</a></p><h3 id="系统运行库层"><a href="#系统运行库层" class="headerlink" title="系统运行库层"></a>系统运行库层</h3><pre><code class="cpp">    这一层通过一些C/C++库来为Android系统提供了主要的特性支持。如SQLite库提供了数据库的支持，OpenGL|ES库提供了3D绘图的支持，Webkit库提供了浏览器内核的支持等。</code></pre><p>More info: <a href>Server</a></p><h3 id="应用框架层"><a href="#应用框架层" class="headerlink" title="应用框架层"></a>应用框架层</h3><pre><code class="bash">  这一层主要提供了构建应用程序时可能用到的各种API，Android自带的一些核心应用就是使用这些API完成的，开发者也可以通过使用这些API来构建自己的应用程序。</code></pre><p>More info: <a href>Generating</a></p><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><pre><code class="cpp">    所有安装在手机上的应用程序都是属于这一层的，比如系统自带的联系人、短信等程序，或者是你从Google Play上下载的小游戏，当然还包括你自己开发的程序。</code></pre><pre><code class="cpp">name: 名称url:  地址img:  头像desc: 描述</code></pre><p>More info: <a href>Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>欢迎来到 <a href="https://anbulang.top">anbulang的blog</a>! 这是我的第一篇文章。. 如果你对我感兴趣，可以关注我哦。</p><h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><h3 id="Linux内核层"><a href="#Linux内核层" class="headerlink" title="Linux内核层"></a>Linux内核层</h3><pre><code class="cpp">    Android系统是基于Linux内核的，这一层为Android设备的各种硬件提供了底层的驱动，如显示驱动、音频驱动、照相机驱动、蓝牙驱动、Wi-Fi驱动、电源管理等。</code></pre><p>More info: <a href>Writing</a></p><h3 id="系统运行库层"><a href="#系统运行库层" class="headerlink" title="系统运行库层"></a>系统运行库层</h3><pre><code class="cpp">    这一层通过一些C/C++库来为Android系统提供了主要的特性支持。如SQLite库提供了数据库的支持，OpenGL|ES库提供了3D绘图的支持，Webkit库提供了浏览器内核的支持等。</code></pre><p>More info: <a href>Server</a></p><h3 id="应用框架层"><a href="#应用框架层" class="headerlink" title="应用框架层"></a>应用框架层</h3><pre><code class="bash">  这一层主要提供了构建应用程序时可能用到的各种API，Android自带的一些核心应用就是使用这些API完成的，开发者也可以通过使用这些API来构建自己的应用程序。</code></pre><p>More info: <a href>Generating</a></p><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><pre><code class="cpp">    所有安装在手机上的应用程序都是属于这一层的，比如系统自带的联系人、短信等程序，或者是你从Google Play上下载的小游戏，当然还包括你自己开发的程序。</code></pre><p>More info: <a href>Deployment</a></p>]]></content>
     
     <summary type="html">
     

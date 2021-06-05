@@ -2,24 +2,17 @@
 <search>
   <entry>
     <title>关于我</title>
-    <url>/post/dab4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+    <url>/post/dab4zxcwer.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>总觉得自己该写点什么，但是一提起笔，回顾自己转瞬即逝的二十多年，却也一时间不知道该从哪里说起，只能感慨：时间真的好快啊。</p>
+]]></content>
       <categories>
         <category>咸鱼</category>
       </categories>
   </entry>
   <entry>
-    <title>哈哈哈</title>
-    <url>/post/7703.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/post/3eeb.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>欢迎来到 <a href="https://anbulang.top">anbulang安的blog</a>! 这是我的第一篇文章。. 如果你对我感兴趣，可以关注我哦。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>欢迎来到 <a href="https://anbulang.top">anbulang的blog</a>! 这是我的第一篇文章。. 如果你对我感兴趣，可以关注我哦。</p>
 <h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><h3 id="Linux内核层"><a href="#Linux内核层" class="headerlink" title="Linux内核层"></a>Linux内核层</h3><pre><code class="cpp">    Android系统是基于Linux内核的，这一层为Android设备的各种硬件提供了底层
 的驱动，如显示驱动、音频驱动、照相机驱动、蓝牙驱动、Wi-Fi驱动、电源管理等。</code></pre>
 <p>More info: <a href>Writing</a></p>
@@ -31,10 +24,6 @@
 <p>More info: <a href>Generating</a></p>
 <h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><pre><code class="cpp">    所有安装在手机上的应用程序都是属于这一层的，比如系统自带的联系人、短信等程序，
 或者是你从Google Play上下载的小游戏，当然还包括你自己开发的程序。</code></pre>
-<pre><code class="cpp">name: 名称
-url:  地址
-img:  头像
-desc: 描述</code></pre>
 <p>More info: <a href>Deployment</a></p>
 ]]></content>
       <categories>
